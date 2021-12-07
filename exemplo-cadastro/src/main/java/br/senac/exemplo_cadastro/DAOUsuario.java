@@ -39,7 +39,7 @@ public class DAOUsuario {
 	
 	
 	public static List<Usuario> listar() throws Exception {
-		String sql = "SELECT nome, id FROM usuario";
+		String sql = "SELECT *  FROM usuario";
 		
 		List<Usuario> resultados = new ArrayList<Usuario>();
 		
@@ -51,6 +51,8 @@ public class DAOUsuario {
 				
 				usuario.setId(rs.getInt("id"));
 				usuario.setNome(rs.getString("nome"));
+				usuario.setCpf(rs.getString("cpf"));
+				usuario.setData(rs.getDate("data_nasc").toLocalDate());
 				
 				resultados.add(usuario);
 			}
@@ -72,6 +74,8 @@ public class DAOUsuario {
 				
 				usuario.setId(rs.getInt("id"));
 				usuario.setNome(rs.getString("nome"));
+				usuario.setCpf(rs.getString("cpf"));
+				usuario.setData(rs.getDate("data_nasc").toLocalDate());
 				
 				resultados.add(usuario);
 			}
