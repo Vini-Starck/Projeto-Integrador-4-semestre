@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    color: white;
+    font-family: 'Montserrat','courier','Fulbo-argenta', 'Trebuchet MS', 'Lucida Sans Unicode','sans-serif';
+    background-image: linear-gradient(to right top, #e9138c, #fc3859, #f36a27, #d69400, #abb600, #8cc637, #66d560, #1ae18b, #00e5a5, #00e9bd, #00ecd2, #36eee3);
+    margin: 40px;
+    background-image: linear-gradient(to right top, #2c81ff, #5f81f3, #7982e7, #8b84dc, #9787d1);
+}
+
+html {
+    min-height: 100%;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    padding-inline-start: 0px;
+}
+
+.menu li {
+    box-shadow: 2px 1px rgb(50, 255, 238);
+    list-style: none;
+    background-color: rgb(94, 56, 201);
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    transition: background-color 1s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.menu li:hover {
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.perfil {
+    
+}

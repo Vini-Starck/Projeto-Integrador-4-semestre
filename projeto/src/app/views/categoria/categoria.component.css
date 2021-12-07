@@ -1,0 +1,57 @@
+input, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    margin-left: 0;
+    box-shadow: 2px 1px rgb(50, 255, 238);
+    background-color: rgb(94, 56, 201);
+    border-color: transparent;
+}
+
+::placeholder{
+    color: white;
+}
+
+button{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(179, 62, 159);
+
+}
+
+.menu2 {
+    display: grid;
+    padding-inline-start: 0px;
+}
+
+.menu2 li {
+    box-shadow: 2px 1px rgb(50, 255, 238);
+    list-style: none;
+    background-color: rgb(94, 56, 201);
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    transition: background-color 1s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.menu2 li:hover {
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.excluir {
+    float: right;
+    background-color: turquoise;
+    border-radius: 20px;
+    padding: 5px;
+    color: black;
+    transition: background-color 1s;
+    transition: color 1s;
+}
+
+.excluir:hover{
+    color:white;
+    background-color: rgb(196, 21, 181);
+}

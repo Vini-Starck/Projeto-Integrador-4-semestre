@@ -1,0 +1,43 @@
+
+<div>
+
+    <h2>Gerenciamento de Produtos</h2>
+    <ul class="menu2">
+        <li (click)="novoProduto()">
+            Novo produto
+        </li>
+    </ul>
+
+    <div *ngIf="produtoEdicao">
+        <h2>Inserir/Editar</h2>
+        <h3>Nome:          <input placeholder="Nome" [(ngModel)]="produtoEdicao.nome"><br></h3>
+        <h3>Código:        <input placeholder="Código" [(ngModel)]="produtoEdicao.codigo"><br></h3>
+        <h3>Preço:         <input placeholder="Preco" [(ngModel)]="produtoEdicao.preco"><br></h3>
+        <h3>Fabricante:    <input placeholder="Fabricante" [(ngModel)]="produtoEdicao.fabricante"><br></h3>
+        <h3>Descrição:     <input placeholder="Descricao" [(ngModel)]="produtoEdicao.descricao"><br></h3>
+        <h3>Qtd em Estoque:<input placeholder="Estoque" [(ngModel)]="produtoEdicao.estoque"><br></h3>
+        <h3>Categoria:     <select [(ngModel)]="produtoEdicao.categoria.id_cat">
+            <option *ngFor="let categoria of categorias" value= {{categoria.id_cat}}>
+              {{categoria.nome}}
+            </option>
+         </select><br></h3>
+        <button (click)="cancelar()">Cancelar</button>
+        <button (click)="salvar()">Salvar</button>
+    </div>
+
+
+    <div class="pesquisa">
+        <input placeholder="Pesquisar nome" [(ngModel)]="busca">
+        <button (click)="pesquisar()">Pesquisar</button>
+
+        <ul class="menu2">
+            <li *ngFor="let pesquisa of pesquisa">
+                <span class="selecionar" (click)="selecionarProduto(pesquisa)">{{pesquisa.nome}} - {{pesquisa.codigo}}</span>
+                <span class="excluir" (click)="excluir(pesquisa)">Excluir</span>
+            </li>
+        </ul>
+
+    </div>
+
+    
+</div>

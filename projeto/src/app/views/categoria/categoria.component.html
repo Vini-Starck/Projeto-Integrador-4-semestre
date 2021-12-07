@@ -1,0 +1,25 @@
+<div>
+
+    <h2>Gerenciamento de Categorias</h2>
+    <ul class="menu2">
+        <li (click)="novoCategoria()">
+            Nova categoria
+        </li>
+    </ul>
+
+    <div *ngIf="categoriaEdicao">
+        <h2>Inserir/Editar</h2>
+        <h3>Nome:          <input placeholder="Nome" [(ngModel)]="categoriaEdicao.nome"><br></h3>
+        <button (click)="cancelar()">Cancelar</button>
+        <button (click)="salvar()">Salvar</button>
+    </div>
+
+    <h2>Categorias:</h2>
+    <ul class="menu2">
+        <li *ngFor="let categoria of categorias">
+            <span class="selecionar" (click)="selecionarCategoria(categoria)">Nome: {{categoria.nome}}</span>
+            <span class="excluir" (click)="excluir(categoria)">Excluir</span>
+        </li>
+    </ul>
+    
+</div>

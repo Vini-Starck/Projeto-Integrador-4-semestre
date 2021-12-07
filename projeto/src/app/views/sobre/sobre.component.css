@@ -1,0 +1,46 @@
+.sobre h1{
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 2.7em;
+    text-align: center;
+}
+
+.aluno {
+    text-align: center;
+}
+
+.professor {
+    text-align: center;
+}
+
+.sobre h2 {
+    text-align: center;
+}
+
+.definicaob{
+    text-align: left;
+    text-shadow: 0.5px 0.5px rgb(0, 0, 0);
+    
+}
+
+.a li {
+    box-shadow: 2px 1px rgb(50, 255, 238);
+    display: flexbox;
+    list-style: none;
+  
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    text-shadow: rgb(2, 2, 2);
+}
+
+.a li:hover {
+    background-color: rgb(43, 19, 124);
+    
+}
+
+.sobre {
+    
+}
+

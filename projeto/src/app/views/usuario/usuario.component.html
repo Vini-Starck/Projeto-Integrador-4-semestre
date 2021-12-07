@@ -1,0 +1,38 @@
+
+<div>
+    <h2>Gerenciamento de Usuarios</h2>
+
+
+    <ul class="menu2">
+        <li (click)="novoUsuario()">
+            Novo usuario
+        </li>
+    </ul>
+
+
+    <div *ngIf="usuarioEdicao">
+        <h2>Inserir/Editar</h2>
+        <input placeholder="Nome" [(ngModel)]="usuarioEdicao.nome"><br>
+        <input placeholder="Cpf" [(ngModel)]="usuarioEdicao.cpf"><br>
+        <input placeholder="Senha" [(ngModel)]="usuarioEdicao.senha"><br>
+        <input placeholder="Data (aaaa-mm-dd)" [(ngModel)]="usuarioEdicao.data"><br>
+        <button (click)="cancelar()">Cancelar</button>
+        <button (click)="salvar()">Salvar</button>
+        
+    </div>
+
+   
+    <div class="pesquisa">
+        <input placeholder="Pesquisar nome" [(ngModel)]="busca">
+        <button (click)="pesquisar()">Pesquisar</button>
+
+        <ul class="menu2">
+            <li *ngFor="let pesquisa of pesquisa">
+                <span class="selecionar" (click)="selecionarUsuario(pesquisa)">{{pesquisa.nome}} - {{pesquisa.id}}</span>
+                <span class="excluir" (click)="excluir(pesquisa)">Excluir</span>
+            </li>
+        </ul>
+
+    </div>
+    
+</div>

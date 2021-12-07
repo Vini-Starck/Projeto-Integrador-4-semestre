@@ -1,0 +1,23 @@
+<div>
+
+    <h2>Efetuar venda</h2>
+    <ul class="menu2">
+        <li (click)="novaVenda()">
+            Nova venda
+        </li>
+    </ul>
+    
+
+    <div *ngIf="vendaEdicao">
+        <h3>Numero venda:          <input placeholder="Numero venda" [(ngModel)]="vendaEdicao.num_venda"><br></h3>
+        <h3>Data venda:        <input placeholder="Data venda" [(ngModel)]="vendaEdicao.data_venda"><br></h3>
+        <h3>Usuario:     <select [(ngModel)]="vendaEdicao.usuario">
+            <option *ngFor="let usuario of usuarios" value= {{usuario.id}}>
+              {{usuario.nome}}
+            </option>
+         </select><br></h3>
+        <button (click)="cancelar()">Cancelar</button>
+        <button (click)="fazerVenda(vendaEdicao)">Efetuar venda</button>
+    </div>
+
+</div>
